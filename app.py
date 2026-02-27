@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 
-# 1. CONFIGURACIÓN DE LA PÁGINA: Debe ser la primera instrucción de Streamlit.
+# 1. CONFIGURACIÓN DE LA PÁGINA: Debe ser la primera instrucción de Streamlit -----
 st.set_page_config(
     page_title="Predicción Electoral 2027", 
     layout="wide", 
@@ -102,5 +102,6 @@ with st.expander("Ver detalle por Provincia (Estimación 2027)"):
         df_ult[['Provincia', 'Participacion', 'Predicción 2027']].style.format(precision=2),
         use_container_width=True
     )
+
 
 st.success("💡 Tip de Programador: He usado `np.polyfit` porque es más ligero que cargar toda la librería de Scikit-Learn solo para una línea.")
